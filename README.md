@@ -31,3 +31,18 @@ logging.level.hello.springmvc=trace
 ### @RequestParam과 @ModelAttributr의 생략
 - String, int, Integer 같은 단순 타입 = @RequestParam
 - 나머지 = @ModelAttribute (argument resolver로 지정해둔 타입 외)
+
+### HttpEntity
+: HTTP header, body 정보를 편리하게 조회
+- 메시지 바디 정보를 직접 조회
+- 요청 파라미터를 조회하는 기능과 관계 없음 
+  - @RequestParam X
+  - @ModelAttribute X
+- 응답에도 사용 가능
+  - 메시지 바디 정보 직접 반환
+  - 헤더 정보 포함 가능
+  - view 조회 X
+
+### 요청 파라미터 vs HTTP 메시지 바디
+- 요청 파라미터 조회: @RequestParam, @ModelAttribute
+- HTTP 메시지 바디 조회: @RequestBody
