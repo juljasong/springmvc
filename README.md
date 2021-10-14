@@ -28,3 +28,6 @@ logging.level.hello.springmvc=trace
 - 하나의 키에 여러 값을 받을 수 있음
 - Http header, HTTP 쿼리 파라미터와 같이 하나의 키에 여러 값을 받을 때 사용
 
+### @RequestParam과 @ModelAttributr의 생략
+- String, int, Integer 같은 단순 타입 = @RequestParam
+- 나머지 = @ModelAttribute (argument resolver로 지정해둔 타입 외)
